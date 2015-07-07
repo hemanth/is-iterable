@@ -1,0 +1,30 @@
+{
+  "name": "is-iterable",
+  "version": "1.0.2",
+  "description": "Checks if a given object is iterable",
+  "license": "MIT",
+  "repository": "hemanth/is-iterable",
+  "author": {
+    "name": "Hemanth.HM",
+    "email": "hemanth.hm@gmail.com",
+    "url": "h3manth.com"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "es6",
+    "check",
+    "iterable"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "*"
+  }
+}
