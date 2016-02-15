@@ -29,6 +29,7 @@ it('should detected non-iterable values', function () {
 
 it('should detect iterable values', function() {
 	assert.strictEqual(isIterable(new String('foo')), true);
+	assert.strictEqual(isIterable('foo'), true);
 
 	assert.strictEqual(isIterable([1,2,3]), true);
 	assert.strictEqual(isIterable([1,2,3][Symbol.iterator]()), true);
