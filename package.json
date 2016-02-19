@@ -1,6 +1,6 @@
 {
   "name": "is-iterable",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Checks if a given object is iterable",
   "license": "MIT",
   "repository": "hemanth/is-iterable",
