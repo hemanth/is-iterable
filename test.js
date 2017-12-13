@@ -2,7 +2,7 @@
 var assert = require('assert');
 var isIterable = require('./');
 
-it('should detected non-iterable values', function () {
+it('should detect non-iterable values', function () {
 	assert.strictEqual(isIterable({}), false);
 	assert.strictEqual(isIterable(new Object()), false);
 
@@ -37,4 +37,20 @@ it('should detect iterable values', function() {
 
 	assert.strictEqual(isIterable(new Map()), true);
 	assert.strictEqual(isIterable(new Set()), true);
+});
+
+it('should return false if Symbol is not defined', function () {
+	var oldSymbol = Symbol;
+
+	try {
+		delete global.Symbol;
+
+		assert.strictEqual(isIterable({}), false);
+		assert.strictEqual(isIterable(new Object()), false);
+
+		assert.strictEqual(isIterable([1,2,3]), false);
+		assert.strictEqual(isIterable(new Array([1,2,3])), false);
+	} finally {
+		global.Symbol = oldSymbol;
+	}
 });
