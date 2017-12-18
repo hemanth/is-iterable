@@ -1,5 +1,5 @@
 'use strict';
 module.exports = function (val) {
-	return (Symbol && 'iterator' in Symbol
-		&& val != null && 'function' === typeof val[Symbol.iterator]);
+	return (typeof Symbol !== 'undefined' && Symbol && 'iterator' in Symbol
+		&& val != null && typeof val[Symbol.iterator] === 'function');
 };
